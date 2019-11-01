@@ -63,9 +63,9 @@ try:
     pass
     value = dials.read(2)
     if value:
-      H_byte = ord(value[0])
+      H_byte = ord(value[0])  # implies H byte=first, and L byte is the second.
       L_byte = ord(value[1])
-      HL_word = (H_byte << 8) + L_byte
+      HL_word = (H_byte << 8) + L_byte  #comment above confirmed
       dialNo = (H_byte >> 3) & 0x07
       position = ((H_byte << 7) & 0xFF) | (L_byte & 0x7F)
       direction= (H_byte >> 2) & 0x01

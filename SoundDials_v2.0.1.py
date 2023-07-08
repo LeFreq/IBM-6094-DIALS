@@ -11,9 +11,8 @@ client = OSC.OSCClient()
 client.connect( ( '127.0.0.1', 57120 ) )
 
 #initiliaze dials arrays:
-dialsPosition=[-1,-1,-1,-1,-1,-1,-1,-1]
-dialsCounter=[0,0,0,0,0,0,0,0]
-dialDirection=[0,0,0,0,0,0,0,0]
+dialsPosition = [-1]*8  #don't know why initializtion is -1 here but 0 for the two variables below
+dialsCounter = dialDirection = [0]*8 #these initialize at 0
 
 print( "IBM Python Sound Dials 6094-010 V2.0.1" )
 
